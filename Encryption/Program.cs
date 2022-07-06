@@ -1,12 +1,14 @@
-﻿namespace Encryption;
+﻿using System.Text;
+using System.Text.Encodings;
+using System.Linq;
+using System.Collections.Generic;
+
+namespace Encryption;
 internal class Program
 {
-    class BinaryEncryption
-    {
-        private string _wordsengrypt = "";
-    }
     static void Main()
     {
+        
 
     }
 }
