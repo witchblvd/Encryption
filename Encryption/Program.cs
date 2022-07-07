@@ -6,9 +6,11 @@ using System.Collections.Generic;
 namespace Encryption;
 internal class Program
 {
+
+    
     static void Main()
     {
-        
-
+    
+     
     }
 }
