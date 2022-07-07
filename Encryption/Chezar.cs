@@ -8,15 +8,9 @@ namespace Encryption
 {
     public class Chezar : IChezarEncryptDecrypt
     {
-         private int _numberalphabet { get; set; }
-
-         private int offsetletter { get; set; }
-
          private string result { get; set; }
 
-         private string words { get; set; }
-
-        private char[] charwords { get; set; }
+         private char[] charwords { get; set; }
 
          private char[] _alphabet = { 'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я' };
 
