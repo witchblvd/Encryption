@@ -8,21 +8,21 @@ namespace Encryption
 {
     public class Chezar : IChezarEncryptDecrypt
     {
-         private string result { get; set; }
+         private string _result { get; set; }
 
-         private char[] charwords { get; set; }
+         private char[] _charwords { get; set; }
 
          private char[] _alphabet = { 'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я' };
 
         public string Encrypt(string Words,int Number, int OffSetLetter)
         {
-            charwords = Words.ToCharArray();
+            _charwords = Words.ToCharArray();
 
-            for (int i = 0; i < charwords.Length; i++)
+            for (int i = 0; i < _charwords.Length; i++)
             {
                 for (int j = 0; j < _alphabet.Length; j++)
                 {
-                    if (charwords[i] == _alphabet[j])
+                    if (_charwords[i] == _alphabet[j])
                     {
                         break;
                     }
@@ -41,20 +41,20 @@ namespace Encryption
                     }
 
                 }
-                charwords[i] = _alphabet[OffSetLetter]; // Меняем букву
+                _charwords[i] = _alphabet[OffSetLetter]; // Меняем букву
             }
-            return result = charwords.ToString();
+            return _result = _charwords.ToString();
         }
 
         public string Decrypt(string Words, int Number, int OffSetLetter)
         {
-            charwords = Words.ToCharArray();
+            _charwords = Words.ToCharArray();
 
-            for (int i = 0; i < charwords.Length; i++)
+            for (int i = 0; i < _charwords.Length; i++)
             {
                 for (int j = 0; j < _alphabet.Length; j++)
                 {
-                    if (charwords[i] == _alphabet[j])
+                    if (_charwords[i] == _alphabet[j])
                     {
                         break;
                     }
@@ -73,15 +73,15 @@ namespace Encryption
                     }
 
                 }
-                charwords[i] = _alphabet[OffSetLetter]; // Меняем букву
+                _charwords[i] = _alphabet[OffSetLetter]; // Меняем букву
             }
-            return result = charwords.ToString();
+            return _result = _charwords.ToString();
         }
 
         public void Print()
         {
             Encrypt("тест",20,2);
-            Console.WriteLine(result);
+            Console.WriteLine(_result);
         }
     }
 }
