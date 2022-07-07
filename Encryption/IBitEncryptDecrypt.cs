@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Encryption
 {
-    internal interface IEncryptDecrypt
+    internal interface IBitEncryptDecrypt
     {
         public string Encrypt(string Words);
         public string Decrypt(string Decrypt);

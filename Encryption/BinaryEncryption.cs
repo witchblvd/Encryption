@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Encryption
 {
-    class BinaryEncryption: IEncryptDecrypt 
+    class BinaryEncryption: IBitEncryptDecrypt 
     {
 
 

@@ -8,6 +8,14 @@ namespace Encryption
 {
     public interface IChezarEncryptDecrypt
     {
+        public string Encrypt(string Words, int Number, int OffSetLetter)
+        {
+            return String.Empty;
+        }
 
+        public string Decrypt(string Words, int Number, int OffSetLetter)
+        {
+            return String.Empty;
+        }
     }
 }

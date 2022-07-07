@@ -10,9 +10,7 @@ internal class Program
     
     static void Main()
     {
-        RSA1 rsa1 = new RSA1();
-        rsa1.SortAlphabetKey();
-        rsa1.Print();
+     
      
     }
 }
