@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Encryption
 {
-    class BinaryEncryption
+    class BinaryEncryption: IEncryptDecrypt 
     {
 
 
@@ -14,7 +14,7 @@ namespace Encryption
 
         private byte[] _stringarray { get; set; }
         private string _bitencrypt { get; set; }
-
+        
         public string Encrypt(string Words)
         {
 
@@ -27,7 +27,8 @@ namespace Encryption
             return _bitencrypt = sb.ToString();
 
         }
-        public string Decryption(string BinaryNumbers)
+        
+        public string Decrypt(string BinaryNumbers)
         {
             _stringarray = Enumerable.Range(0, BinaryNumbers.Length / 8).Select(i => Convert.ToByte(BinaryNumbers.Substring(i * 8, 8), 2)).ToArray();  /// This method decrypts words into binary; Этот метод переводит двоичный код в слова
             return _wordsencrypt = Encoding.UTF8.GetString(_stringarray);
